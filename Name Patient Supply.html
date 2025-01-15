@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .fl_container{
+            display: flex;
+            min-height: 600px;
+            padding: 72px 0px 72px 32px;
+            gap: 48px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image_container{
+            flex: 1 0 200px;
+        }
+
+        .image_container img{
+            width: 100%;
+
+        }
+
+        .description{
+            flex: 1 0 200px;
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+            flex-direction: column;
+            align-items: center;
+            max-width: 590px;
+        }
+
+        .description p{
+            color: #000;
+            text-align: start;
+            font-family: "Roboto Slab";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 187.5% */
+        }
+
+        .description button{
+            width: 213px;
+            border-radius: 12px;
+            background: #1D9FDA;
+            padding: 10px;
+            border: none;
+
+            color: #FFF;
+            text-align: center;
+            font-family: "Noto Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        
+        @media(max-width:800px){
+            .fl_container{
+                flex-direction: column;
+                padding-right: 32px;
+                
+            }
+            .description p{
+                text-align: start;
+            }
+        }
+
+        @media(max-width: 500px){
+            .fl_container{
+                padding: 48px 16px;
+            }
+        }
+
+        /* section 2 */
+
+        .fl_container2{
+            display: flex;
+            flex-direction: column;
+            background: #EBEDF4;
+            justify-content: center;
+            padding:72px;
+            min-height: 600px;
+            gap: 32px;
+        }
+
+        .list_num_wrapper{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #208717;
+            color: white;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            min-width: 40px;
+            min-height: 40px;
+            text-align: center;
+            padding: 8px;          
+            position: relative;
+            top: 4px;
+        }
+
+        .black_wrapper{
+            background: #000;
+        }
+
+        .description_item{
+            display: flex;
+            gap: 16px;
+
+        }
+
+        .fl_container2 h2{
+            color: #000;
+            font-family: Inter;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .description_item p{
+            color: #000;
+            font-family: "Roboto Slab";
+            font-size: 16px;
+            font-style: normal;
+            line-height: 30px; /* 187.5% */
+        }
+
+        .description_container{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        @media(max-width:700px){
+            .fl_container2{
+                padding:56px 24px;
+            }
+        }
+
+        @media(max-width:500px){
+            .fl_container2{
+                padding: 56px 16px;
+            }
+
+
+            .fl_container2 h2{
+                font-size: 24px;
+            }
+
+            .list_num_wrapper{
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 4px;
+
+
+            }
+
+        }
+        /* section 3 */
+
+        .list_num_wrapper_s{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #208717;
+            color: white;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            min-width: 32px;
+            min-height: 32px;
+            text-align: center;
+            padding: 5px;          
+            position: relative;
+            top: 4px;
+
+        }
+
+        .black_wrapper{
+            background: #000;
+        }
+        .steps_item{
+            display: flex;
+            gap: 16px;
+        }
+        .steps_container{
+            display: flex;
+            flex-direction: column;
+        }
+        .fl_container3{
+            display: flex;
+            min-height: 600px;
+            align-items: center;
+            padding: 56px 0px 56px 32px;
+            gap: 16px;
+
+
+        }
+
+        .steps_image_container{
+            position: relative;
+            flex: 1;
+        }
+
+        .steps_container{
+            flex: 1;
+            max-width: 630px;
+        }
+
+        .bottom_image{
+            
+            width: 99%;
+        }
+
+        .top_image{
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: 100%;
+
+        }
+        .steps_item p{
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .steps_wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .steps_container h2{
+            color: #000;
+            font-family: Inter;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .steps_container{
+            display: flex;
+            gap: 32px;
+        }
+
+        @media(max-width:850px){
+            .fl_container3{
+                flex-direction: column;
+                padding-right: 32px;
+                gap: 32px;
+            }
+            .steps_container{
+                max-width: none;
+            }
+
+
+        }
+
+        @media(max-width:500px){
+            .fl_container3{
+                padding: 56px 16px;
+            }
+            .fl_container3 h2{
+                font-size: 24px;
+            }
+            .steps_item p{
+                font-size: 16px;
+                line-height: normal;
+            }
+            .list_num_wrapper_s{
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 4px;
+
+
+            }
+        }
+
+        /* section 4 */
+
+        .fl_container4{
+            display: flex;
+            padding: 72px 32px;
+            min-height: 600px;
+            background: #EBEDF4;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container_wrapper4 h2{
+            color: #000;
+            font-family: Inter;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .container_wrapper4{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: start;
+        }
+        .document_list{
+            display: flex;
+            gap: 28px;
+            flex-direction: column;
+            padding-left: 32px;
+
+        }
+
+        .document_list li{
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        @media(max-width:500px){
+            .document_list li{
+                font-size: 16px;
+            }
+            .container_wrapper4 h2{
+                font-size: 24px;
+            }
+            
+        }
+
+        /* section 5 */
+
+        .fl_container5{
+            display: flex;
+            min-height: 460px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container_wrapper5{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            max-width: 920px;
+            padding: 48px 32px;
+        }
+
+        .contactus_button{
+            width: 210px;
+            padding: 10px;
+            color: #1D9FDA;
+            text-align: center;
+            font-family: "Noto Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border: none;
+            background: white;
+        }
+        .contactus_button:hover{
+            cursor: pointer;
+        }
+
+        .container_wrapper5 p{
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 2.25rem; /* 180% */
+
+        }
+
+        @media(max-width: 500px){
+            .container_wrapper5 p{
+            text-align: center;
+            font-size: 1rem;
+            line-height: 2rem; 
+
+        }
+            
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="fl_container">
+        <div class="description">
+            <p>
+                "Named patient supply," also referred to as "named patient program," or "compassionate use," is a provision in the pharmaceutical industry that allows patients to gain access to drugs that are not yet approved in their country. Regulatory authorities in various countries oversee these programs to ensure they are conducted ethically and safely, balancing the need for access to potentially life-saving drugs with the requirement to protect patients from unproven or unsafe treatments
+            </p>
+            <button>
+                Send Enquiry
+            </button>
+        </div>
+        <div class="image_container">
+            <img src="ab.jpeg" alt="">
+        </div>
+        
+
+    </div>
+    <!-- section 2 -->
+
+    <div class="fl_container2">
+        <h2>
+            Circumstances under which Named patient supply is used
+        </h2>
+        <div class="description_container">
+            <div class="description_item">
+                <div class="list_num_wrapper">
+                    1
+                </div>
+                <p>
+                    <strong>For Drugs in Development:</strong> If a drug is still in the clinical trial phase or under review for market approval, but preliminary data suggests it could be beneficial for certain conditions, doctors may be able to request it on behalf of their patients. This is particularly common for patients who have exhausted all other treatment options and cannot wait for the drug to be commercially available.
+                </p>
+            </div>
+            <div class="description_item">
+                <div class="list_num_wrapper black_wrapper" >
+                    2
+                </div>
+                <p>
+                    <strong>For Rare Diseases:</strong>  In the case of rare diseases, where drug development is limited and might not be commercially viable for widespread distribution, manufacturers may provide the drug on a named patient basis to meet the needs of these patients.                
+                </p>
+            </div>
+            <div class="description_item">
+                <div class="list_num_wrapper">
+                    3
+                </div>
+                <p>
+                    <strong>For Drugs Not Available in the Patient's Country:</strong>  Even if a drug is approved and available in some parts of the world, regulatory and commercial reasons might delay or prevent its availability in other regions. Named patient programs can facilitate access to these medications for patients in countries where the drug is not yet approved or marketed. 
+                </p>            
+            </div>
+        </div>
+
+    </div>
+
+    <!-- section 3 -->
+
+    <div class="fl_container3">
+        <div class="steps_container">
+            <h2>
+                Setps involved in named patient supply
+            </h2>
+            <div class="steps_wrapper">
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s">
+                        1
+                    </div>
+                    <p>
+                        Once availability of medicine is confirmed, payment to be processed from your end.
+                    </p>
+                </div>
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s black_wrapper">
+                        2
+                    </div>
+                    <p>
+                        Once the product is ready, the origin export formalities will take 2-3 days.
+                    </p>
+                </div>
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s">
+                        3
+                    </div>
+                    <p>
+                        In the meantime you can apply for import/licenses for import clearance. 
+                    </p>
+                </div>
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s black_wrapper">
+                        4
+                    </div>
+                    <p>
+                        Transit time will be minimum 3-4 days. 
+                    </p>
+                </div>
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s">
+                        5
+                    </div>
+                    <p>
+                        Upon package arrival in your country, clearance will take minimum 5-6 days. 
+                    </p>
+                </div>
+                <div class="steps_item">
+                    <div class="list_num_wrapper_s black_wrapper">
+                        6
+                    </div>
+                    <p>
+                        Transit time will be minimum 3-4 days. 
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="steps_image_container">
+            <img src="npt.svg" alt="" class="top_image">
+            <img src="npb.png" alt="" class="bottom_image">
+        </div>
+
+    </div>
+
+    <!-- section 4 -->
+
+    <div class="fl_container4">
+        <div class="container_wrapper4">
+            <h2>
+                Document required for this process
+            </h2>
+            <ul class="document_list">
+                <li>Patient ID</li>
+                <li>Valid Dr. Prescription</li>
+                <li>Import Permit (Form 12B) link </li>
+                <li>Customs Duty Exemption Certificate(CDEC) [Applicable only for Life Saving drugs]</li>
+                <li>Duty Bond (If requested by Customs)</li>
+                <li>Authorization Letter (CHA/Forwarder)</li>
+                <li>Delivery Order (DO) Collection Letter</li>
+            </ul>
+
+        </div>
+        
+
+    </div>
+
+    <!-- section 5 -->
+
+    <div class="fl_container5">
+        <div class="container_wrapper5">
+            <p>If you require assistance with documentation for Named Patient Supply, please don't hesitate to reach out. Our expert team is ready to guide you through every step, ensuring a smooth and compliant process. Contact us today for tailored support.</p>
+            <button class="contactus_button">Contact us</button>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
